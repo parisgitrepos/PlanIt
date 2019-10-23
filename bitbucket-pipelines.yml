@@ -1,0 +1,22 @@
+# This is a sample build configuration for Python.
+# Check our guides at https://confluence.atlassian.com/x/x4UWN for more examples.
+# Only use spaces to indent your .yml configuration.
+# -----
+# You can specify a custom docker image from Docker Hub as your build environment.
+image: python:3.7.3
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - pip
+        script: # Modify the commands below to build your repository.
+        - pipe: atlassian/heroku-deploy:1.1.0
+          variables:
+            HEROKU_API_KEY: '3795d161-b7f3-4f6d-b1a4-67d67611b9f1'
+            HEROKU_APP_NAME: 'plan-it-783402957'
+            ZIP_FILE: '<string>'
+            # WAIT: '<boolean>' # Optional.
+            # DEBUG: '<boolean>' # Optional
+
+        - pip install -r requirements.txt

@@ -15,7 +15,7 @@ pipelines:
           variables:
             HEROKU_API_KEY: '3795d161-b7f3-4f6d-b1a4-67d67611b9f1'
             HEROKU_APP_NAME: 'plan-it-783402957'
-            ZIP_FILE: '<string>'
+            ZIP_FILE: 'Deploy.zip'
             # WAIT: '<boolean>' # Optional.
             # DEBUG: '<boolean>' # Optional
 
